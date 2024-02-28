@@ -24,7 +24,8 @@ function reset(){
 <style scoped>
 button {
   font-weight: bold;
-  color: rgb(3, 90, 18);
-  background-color: rgb(22, 201, 156);
-  border: 2;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border-color: rgb(13, 134, 134);
+  border: 4;
 }</style>
