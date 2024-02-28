@@ -1,24 +1,34 @@
-<script setup>
-import { ref } from 'vue'
-
-const contador = ref(0)
-
-function decrementar(){
-  if (contador.value >0){contador.value--}
-}
-
-function reset(){
-  contador.value = 0
-  
-}
-
+<script>
+export default {
+  data() {
+    return {
+      contador: 0,
+    };
+  },
+  methods: {
+    incrementar() {
+      this.contador++;
+    },
+    decrementar() {
+      if (this.contador > 0) {
+        this.contador--;
+      }
+    },
+    reiniciar() {
+      this.contador = 0;
+    },
+  },
+};
 </script>
 
-<template> 
-<button @click="contador++">+</button>
-<button @click="decrementar">-</button>
-<button @click="reset">reset</button>
-<p> valor do contador: {{ contador }}</p>
+<template>
+  <div>
+    <h1>Contador</h1>
+    <p> {{ contador }} </p>
+    <button @click="incrementar">+</button>
+    <button @click="decrementar">-</button>
+    <button @click="reiniciar">Reiniciar</button>
+  </div>
 </template>
 
 <style scoped>
@@ -28,4 +38,5 @@ button {
   background-color: rgb(0, 0, 0);
   border-color: rgb(13, 134, 134);
   border: 4;
-}</style>
+}
+</style>
